@@ -13,9 +13,8 @@ class demo():
         body2 = repl().replace(body)
 
 
-        aa = 'cd C:\ &start grpcurl.exe &grpcurl -plaintext -d ' + \
-            body2 + ' ' + \
-            url + ' ' + server
+        aa = 'start grpcurl.exe &grpcurl -plaintext -d ' + "\""+ body2 +"\""+ ' ' +   url + ' ' + server
+        print(aa)
 
         result = os.popen(aa)
         res = result.buffer.read().decode(encoding='utf8')
@@ -47,13 +46,14 @@ class demo():
 if __name__ == "__main__":
 
     aa = demo()
-    aa1 = aa.request(body="\"{'orderNo': 'BPA0212011013990', 'fininstId': 11, 'reqId': '0176658bded801f18a7286c176467782'}\""     ,
-                       url='10.42.2.18:30053',
+    aa1 = aa.request(body="{'orderNo': 'BPA0212011013990', 'fininstId': 11, 'reqId': '0176658bded801f18a7286c176467782'}"     ,
+                       url='grpc-cango-fininst-gw.cango.local:8080',
                        server='org.cango.fininst.gw.api.FininstGwService.preApplyQuery')
 
-    # aa1 = aa.test_demo(body="{'orderNo': 'BPA0212011013990', 'fininstId': 11, 'reqId': '01765138e9f400bd8a7286c176467782'}" ,
-    #                    url='10.42.2.18:30053',
-    #                    server='org.cango.fininst.gw.api.FininstGwService.preApplyQuery')
+    # bo = "{'orderNo':'BPA0212011013869','fininstId':11,'coFininstId':11,'name':'闫凯','paperType':1,'paperNo':'310109199306010137','paperValidityStartTime':1537513123000,'paperValidityEndTime':253402185600000,'bankAccount':'623185009100000154','bankMobile':'17787598603','sex':1,'customerFlg':1,'secondhandFlg':0,'dealerId':13694,'maritalStatus':2,'spouseName':'阿伊','spousePaperType':1,'spousePaperNo':'310106199112170010','spouseMobile':'13111112233','spouseSex':2,'spouseOptional':1,'files':[]}"
+    # aa1 = aa.request(body= bo,
+    #                    url='grpc-cango-fininst-gw.cango.local:8080',
+    #                    server='org.cango.fininst.gw.api.FininstGwService.preApply')
     print(aa1)
 
 

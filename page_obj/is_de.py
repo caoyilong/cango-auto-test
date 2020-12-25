@@ -20,7 +20,7 @@ class is_de():
         dict_res1 = eval(res1)
         dict_de_body[de_key] = dict_res1[de_key]  ##拼接查询接口的新body
         new_de_body2 = str(dict_de_body)
-        fi_body = '"'+ new_de_body2+ '"' ##  body  加""
+        fi_body = new_de_body2  ##  body  加""
         time.sleep(2)
         count = 0
 
@@ -40,10 +40,10 @@ class is_de():
 if __name__ == "__main__":
     aa = is_de()
     aa1 = aa.is_depend(body="{'orderNo':'BPA0212011013990','fininstId':11,'coFininstId':11,'name':'张三一','paperType':1,'paperNo':'520101199009050018','paperValidityStartTime':1537513123000,'paperValidityEndTime':1695279523000,'bankAccount':'310109199003074432','bankMobile':'15900008911','sex':1,'customerFlg':1,'secondhandFlg':0,'dealerId':1234,'maritalStatus':1,'spouseOptional':'1'}",
-                       url='10.42.2.18:30053',
+                       url='grpc-cango-fininst-gw.cango.local:8080',
                        server='org.cango.fininst.gw.api.FininstGwService.preApply',
                        de_key="reqId",
-                       de_url='10.42.2.18:30053',
+                       de_url='grpc-cango-fininst-gw.cango.local:8080',
                        de_body="{'orderNo': 'BPA0212011013990','fininstId': 11}"     ,
                        de_server='org.cango.fininst.gw.api.FininstGwService.preApplyQuery'     ,
                        ass='11111'

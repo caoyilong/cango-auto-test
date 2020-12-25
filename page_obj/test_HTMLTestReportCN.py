@@ -1,7 +1,7 @@
 # -*- coding:utf-8 -*-
 
 import unittest
-import HTMLTestReportCN
+from gRPC.page_obj import HTMLTestReportCN
 
 
 
@@ -84,9 +84,9 @@ if __name__ == ‘python‘:
 
 ---试了不行
 '''
-if __name__ == '__main__':
+if __name__ == 'test_HTMLTestReportCN.py':
     #确定生成报告的路径
-    filePath ='F:\\HTMLTestReportCN.html'
+    filePath ='D:\\\HTMLTestReportCN.html'
     fp = open(filePath,'wb')
     #生成报告的Title,描述
     runner = HTMLTestReportCN.HTMLTestRunner(

@@ -60,7 +60,7 @@ class RunMain():
 
     def main(self):
         if self.depend == None:
-            self.nodepend()l
+            self.nodepend()
         if self.depend != None:
             self.isdepend()
 
