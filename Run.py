@@ -1,8 +1,7 @@
 # -*- coding: utf-8 -*-
 import unittest
 import time
-from gRPC.page_obj import HTMLTestReportCN
-from jzjgRPC.HTMLTestRunner import HTMLTestRunner
+from page_obj import HTMLTestReportCN
 from email.mime.text import MIMEText
 from email.header import Header
 import smtplib

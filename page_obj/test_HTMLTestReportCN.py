@@ -1,7 +1,7 @@
 # -*- coding:utf-8 -*-
 
 import unittest
-from gRPC.page_obj import HTMLTestReportCN
+from page_obj import HTMLTestReportCN
 
 
 

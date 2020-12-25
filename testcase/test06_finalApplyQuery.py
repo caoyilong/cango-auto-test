@@ -4,15 +4,15 @@ import sys
 import random
 sys.path.append("./page_obj")
 sys.path.append("./user4element")
-from gRPC.page_obj.demo import demo
-from gRPC.page_obj.preApply import preApply
-from gRPC.user4element import user4element
-from gRPC.page_obj import HTMLTestRunner
+from page_obj.demo import demo
+from page_obj.preApply import preApply
+from user4element import user4element
+from page_obj import HTMLTestRunner
 import paramunittest
-from gRPC.Excel import readExcel
-from gRPC.page_obj.is_de import is_de
+from Excel import readExcel
+from page_obj.is_de import is_de
 import time
-from gRPC.page_obj import HTMLTestReportCN
+from page_obj import HTMLTestReportCN
 
 login_xls = readExcel().get_xls(sheet_name='finalApplyQuery')
 print(login_xls)

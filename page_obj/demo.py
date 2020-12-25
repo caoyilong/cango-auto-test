@@ -5,7 +5,7 @@ import os
 import unittest
 import json
 import ast
-from gRPC.page_obj.replace import repl
+from page_obj.replace import repl
 import encodings
 # class demo(unittest.TestCase):
 class demo():

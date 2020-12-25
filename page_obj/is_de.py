@@ -2,8 +2,8 @@
 #coding=utf-8
 
 import time
-from gRPC.page_obj.demo import demo
-from gRPC.page_obj.replace import repl
+from page_obj.demo import demo
+from page_obj.replace import repl
 import sys
 
 
