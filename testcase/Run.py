@@ -2,9 +2,7 @@
 import unittest
 import time
 from page_obj import HTMLTestReportCN
-from email.mime.text import MIMEText
-from email.header import Header
-import smtplib
+
 
 
 report_dir = './report/'
@@ -42,5 +40,6 @@ if __name__ == '__main__':
     runner.run(discover)
     fp.close()
     #file_path = new_report('./report/')
+
 
 
