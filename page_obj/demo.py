@@ -7,18 +7,21 @@ import json
 import ast
 from page_obj.replace import repl
 import encodings
+import subprocess
 # class demo(unittest.TestCase):
 class demo():
     def request(self, body, url, server):
         body2 = repl().replace(body)
 
 
-        aa = 'start grpcurl.exe &grpcurl -plaintext -d ' + "\""+ body2 +"\""+ ' ' +   url + ' ' + server
-        print(aa)
+        cmd = 'cd .. &start grpcurl.exe &grpcurl -plaintext -d ' + "\""+ body2 +"\""+ ' ' +   url + ' ' + server
+        print(cmd)
 
-        result = os.popen(aa)
-        res = result.buffer.read().decode(encoding='utf8')
-        result.close()
+        # result = os.popen(cmd)
+        # res = result.buffer.read().decode(encoding='utf8')
+        result = subprocess.Popen(cmd, stdout=subprocess.PIPE, shell=True,stderr=subprocess.STDOUT)
+        res = result.stdout.read().decode("utf8")
+        # res.close()
         # res = result.read()
         # sp_res = res.replace('\n', '').replace(' ', '')
         # res2 = eval(res)
@@ -55,6 +58,7 @@ if __name__ == "__main__":
     #                    url='grpc-cango-fininst-gw.cango.local:8080',
     #                    server='org.cango.fininst.gw.api.FininstGwService.preApply')
     print(aa1)
+    print(type(aa1))
 
 
 

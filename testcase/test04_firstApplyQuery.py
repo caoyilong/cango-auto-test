@@ -5,11 +5,9 @@ import random
 sys.path.append("./page_obj")
 sys.path.append("./user4element")
 from page_obj.demo import demo
-from page_obj.preApply import preApply
-from user4element import user4element
-from page_obj import HTMLTestRunner
+
 import paramunittest
-from Excel import readExcel
+from testcase.Excel import readExcel
 from page_obj.is_de import is_de
 import time
 from page_obj import HTMLTestReportCN

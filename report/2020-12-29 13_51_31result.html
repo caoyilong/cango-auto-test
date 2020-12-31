@@ -123,9 +123,9 @@ function html_escape(s) {
 <div class='heading'>
 <h1 style="font-family: Microsoft YaHei">统一网关测试报告</h1>
 <p class='attribute'><strong>测试人员 : </strong> 罗哲</p>
-<p class='attribute'><strong>开始时间 : </strong> 2020-12-25 14:15:46</p>
-<p class='attribute'><strong>合计耗时 : </strong> 0:00:07.972845</p>
-<p class='attribute'><strong>测试结果 : </strong> 共 18，通过 18，通过率= 100.00%</p>
+<p class='attribute'><strong>开始时间 : </strong> 2020-12-29 13:51:31</p>
+<p class='attribute'><strong>合计耗时 : </strong> 0:00:10.090455</p>
+<p class='attribute'><strong>测试结果 : </strong> 共 18，通过 13，失败 4，错误 1，通过率= 72.22%</p>
 
 <p class='description'>一期接口自动化</p>
 </div>
@@ -133,9 +133,9 @@ function html_escape(s) {
 
 
 <p id='show_detail_line'>
-<a class="btn btn-primary" href='javascript:showCase(0)'>概要{ 100.00% }</a>
-<a class="btn btn-danger" href='javascript:showCase(1)'>失败{ 0 }</a>
-<a class="btn btn-success" href='javascript:showCase(2)'>通过{ 18 }</a>
+<a class="btn btn-primary" href='javascript:showCase(0)'>概要{ 72.22% }</a>
+<a class="btn btn-danger" href='javascript:showCase(1)'>失败{ 4 }</a>
+<a class="btn btn-success" href='javascript:showCase(2)'>通过{ 13 }</a>
 <a class="btn btn-info" href='javascript:showCase(3)'>所有{ 18 }</a>
 </p>
 <table id='result_table' class="table table-condensed table-bordered table-hover">
@@ -179,7 +179,7 @@ function html_escape(s) {
     
 pt1_1: 开始单个测试
 start grpcurl.exe &amp;grpcurl -plaintext -d "{\"orderNo\":\"BPA0212011013869\",\"fininstId\":11,\"coFininstId\":11,\"name\":\"闫凯\",\"paperType\":1,\"paperNo\":\"310109199306010137\",\"paperValidityStartTime\":1537513123000,\"paperValidityEndTime\":253402185600000,\"bankAccount\":\"623185009100000154\",\"bankMobile\":\"17787598603\",\"sex\":1,\"customerFlg\":1,\"secondhandFlg\":0,\"dealerId\":13694,\"maritalStatus\":2,\"spouseName\":\"阿伊\",\"spousePaperType\":1,\"spousePaperNo\":\"310106199112170010\",\"spouseMobile\":\"13111112233\",\"spouseSex\":2,\"spouseOptional\":\"1\",\"files\":[]}" grpc-cango-fininst-gw.cango.local:8080 org.cango.fininst.gw.api.FininstGwService.preApply
-('reqId', '{\n  "reqId": "01769889f75c00a88a7286ed768438dd",\n  "reqType": 1001,\n  "orderNo": "BPA0212011013869",\n  "fininstId": "11",\n  "status": "P"\n}\n', '成功：reqIdin{\n  "reqId": "01769889f75c00a88a7286ed768438dd",\n  "reqType": 1001,\n  "orderNo": "BPA0212011013869",\n  "fininstId": "11",\n  "status": "P"\n}\n')
+('reqId', '{\n  "reqId": "0176ad0d349a00da8a7285ba7670450f",\n  "reqType": 1001,\n  "orderNo": "BPA0212011013869",\n  "fininstId": "11",\n  "status": "P"\n}\n', '成功：reqIdin{\n  "reqId": "0176ad0d349a00da8a7285ba7670450f",\n  "reqType": 1001,\n  "orderNo": "BPA0212011013869",\n  "fininstId": "11",\n  "status": "P"\n}\n')
 结束单个测试
 
 
@@ -220,31 +220,35 @@ start grpcurl.exe &amp;grpcurl -plaintext -d "{\"reqId\":\"0176847ee46500388a728
     </td>
 </tr>
 
-<tr class='passClass warning'>
+<tr class='errorClass warning'>
     <td>paramunittest.test_firstApply_0</td>
     <td class="text-center">1</td>
+    <td class="text-center">0</td>
+    <td class="text-center">0</td>
     <td class="text-center">1</td>
-    <td class="text-center">0</td>
-    <td class="text-center">0</td>
     <td class="text-center"><a href="javascript:showClassDetail('c3',1)" class="detail" id='c3'>详细</a></td>
 </tr>
 
-<tr id='pt3_1' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_case_1: 初审</div></td>
+<tr id='ft3_1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_case_1: 初审</div></td>
     <td colspan='5' align='center'>
     <!--默认收起错误信息 -Findyou
-    <button id='btn_pt3_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt3_1'>通过</button>
-    <div id='div_pt3_1' class="collapse">  -->
+    <button id='btn_ft3_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft3_1'>错误</button>
+    <div id='div_ft3_1' class="collapse">  -->
 
     <!-- 默认展开错误信息 -Findyou -->
-    <button id='btn_pt3_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt3_1'>通过</button>
-    <div id='div_pt3_1' class="collapse in">
+    <button id='btn_ft3_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft3_1'>错误</button>
+    <div id='div_ft3_1' class="collapse in">
     <pre>
     
-pt3_1: 开始单个测试
+ft3_1: 开始单个测试
 start grpcurl.exe &amp;grpcurl -plaintext -d "{\"orderNo\": \"BPA0212011013869\",\"fininstId\": 11,\"coFininstId\": 11,\"name\": \"闫凯\",\"paperType\": 1,\"paperNo\": \"310109199306010137\",\"paperValidityStartTime\": 1537513123000,\"paperValidityEndTime\": 253402185600000,\"mobile\": \"17787598603\",\"bankAccount\": \"623185009100000154\",\"bankMobile\": \"17787598603\",\"sex\": 1,\"customerFlg\": 1,\"secondhandFlg\": 0,\"dealerId\": 13694,\"maritalStatus\": 2,\"spouseName\": \"阿伊\",\"spousePaperType\": 1,\"spousePaperNo\":\"310106199112170010\",\"spouseMobile\": \"13111112233\",\"spouseSex\": 2,\"spouseOptional\": \"1\",\"files\": []}" grpc-cango-fininst-gw.cango.local:8080 org.cango.fininst.gw.api.FininstGwService.firstApply
-('reqId', '{\n  "reqId": "01769889fd9500ca8a7285ba7670450f",\n  "reqType": 1003,\n  "orderNo": "BPA0212011013869",\n  "fininstId": "11",\n  "status": "P"\n}\n', '成功：reqIdin{\n  "reqId": "01769889fd9500ca8a7285ba7670450f",\n  "reqType": 1003,\n  "orderNo": "BPA0212011013869",\n  "fininstId": "11",\n  "status": "P"\n}\n')
+('reqId`1111111111111', '{\n  "reqId": "0176ad0d39be00b28a7286ed768438dd",\n  "reqType": 1003,\n  "orderNo": "BPA0212011013869",\n  "fininstId": "11",\n  "status": "P"\n}\n', '失败原因：reqId`1111111111111!in{\n  "reqId": "0176ad0d39be00b28a7286ed768438dd",\n  "reqType": 1003,\n  "orderNo": "BPA0212011013869",\n  "fininstId": "11",\n  "status": "P"\n}\n')
 结束单个测试
+Traceback (most recent call last):
+  File "C:\Users\cango\Desktop\GIT\cango-auto-test\testcase\test03_firstApply.py", line 53, in test_case_1
+    raise False
+TypeError: exceptions must derive from BaseException
 
 
     </pre>
@@ -306,7 +310,7 @@ Wrong
     
 pt5_1: 开始单个测试
 start grpcurl.exe &amp;grpcurl -plaintext -d "{\"name\":\"闫凯\",\"orderNo\":\"BPA0212011013869\",\"paperNo\":\"310109199306010137\",\"address\":\"上海市浦东新区浦电路100号\",\"bankLmtSerNo\":\"2012160065461\",\"mobile\":\"17787598603\",\"birthday\":758563200000,\"branchName\":\"江西灿谷汽车咨询服务有限公司\",\"branchProvinceName\":\"江西省\",\"carBrandName\":\"一汽\",\"carInvoicePrice\":\"59999.00\",\"carManufacturerName\":\"一汽吉林大发\",\"carModelName\":\"森雅M80-1.3-MT超值版五座(国Ⅳ)\",\"carSeriesName\":\"森雅M80\",\"carType\":1,\"cityName\":\"南昌市\",\"coFininstId\":11,\"dealerCityName\":\"南昌市\",\"dealerName\":\"安义县峰云汽贸服务有限公司\",\"dealerProvinceName\":\"江西\",\"dealerType\":\"1\",\"dfimUserName\":\"销售25\",\"downPayment\":\"19999.00\",\"education\":2,\"employmentProperty\":1,\"factIntRate\":\"9.99\",\"fininstId\":11,\"guidePrice\":\"51900.00\",\"houseOwnership\":1,\"leasehold\":\"3\",\"loanAmount\":\"41000.00\",\"maritalStatus\":2,\"monthlyIncome\":\"16666.67\",\"paperType\":1,\"productName\":\"上银-乘用车-323\",\"provinceName\":\"江西省\",\"remainAmount\":\"1.00\",\"residenceCityName\":\"合肥市\",\"residenceProviceName\":\"安徽省\",\"salConsultabtMobile\":\"15210879806\",\"salConsultabtName\":\"许翔\",\"secondhandFlg\":0,\"sex\":1,\"spouseBirthday\":758563200000,\"spouseMobile\":\"13111112233\",\"spouseName\":\"阿伊\",\"spousePaperNo\":\"310106199112170010\",\"spousePaperType\":1,\"spouseSex\":2,\"tel\":\"15900008911\",\"trade\":1,\"urgency1Name\":\"55\",\"urgency1Relation\":\"30101\",\"urgency1Tel\":\"15210879804\",\"urgency2Name\":\"哈哈\",\"urgency2Relation\":\"30104\",\"urgency2Tel\":\"15210879801\",\"urgency3Name\":\"嘿嘿\",\"urgency3Relation\":\"30101\",\"urgency3Tel\":\"15210879809\",\"workAddress\":\"毒奶色\",\"workCityName\":\"南昌市\",\"workProvinceName\":\"江西省\",\"workUnitName\":\"546464676\",\"workUnitType\":5}" grpc-cango-fininst-gw.cango.local:8080 org.cango.fininst.gw.api.FininstGwService.finalApply
-('reqId', '{\n  "reqId": "01769889ff2200cb8a7285ba7670450f",\n  "reqType": 1005,\n  "orderNo": "BPA0212011013869",\n  "fininstId": "11",\n  "status": "P"\n}\n', '成功：reqIdin{\n  "reqId": "01769889ff2200cb8a7285ba7670450f",\n  "reqType": 1005,\n  "orderNo": "BPA0212011013869",\n  "fininstId": "11",\n  "status": "P"\n}\n')
+('reqId', '{\n  "reqId": "0176ad0d3b7000db8a7285ba7670450f",\n  "reqType": 1005,\n  "orderNo": "BPA0212011013869",\n  "fininstId": "11",\n  "status": "P"\n}\n', '成功：reqIdin{\n  "reqId": "0176ad0d3b7000db8a7285ba7670450f",\n  "reqType": 1005,\n  "orderNo": "BPA0212011013869",\n  "fininstId": "11",\n  "status": "P"\n}\n')
 结束单个测试
 
 
@@ -370,7 +374,7 @@ start grpcurl.exe &amp;grpcurl -plaintext -d "{\"orderNo\":\"BPA0212011013869\",
     
 pt7_1: 开始单个测试
 start grpcurl.exe &amp;grpcurl -plaintext -d "{\"orderNo\":\"BPA0212011013869\",\"name\":\"闫凯\",\"paperNo\":\"310109199306010137\",\"bankLmtSerNo\":\"2012080063961\",\"contractNo\":\"hq20180912211049\",\"fininstId\":11,\"coFininstId\":11,\"mainLoanAmount\":\"39999.00\",\"loanUse\":\"1\",\"loanPayway\":\"1\",\"regType\":\"2\",\"paperType\":1,\"sex\":1,\"selName\":\"销售25\",\"finName\":\"饶伟兴\",\"mainBankAccount\":\"4367421147620083688\",\"mainBankAccountName\":\"张飞\",\"mainBankMobile\":\"15768803913\",\"carChassisNo\":\"7924106BCD9278565\",\"constactDate\":1606872343547,\"gpsNum\":1,\"files\":[]}" grpc-cango-fininst-gw.cango.local:8080 org.cango.fininst.gw.api.FininstGwService.loanApply
-('reqId', '{\n  "reqId": "0176988a02c400a98a7286ed768438dd",\n  "reqType": 1007,\n  "orderNo": "BPA0212011013869",\n  "fininstId": "11",\n  "status": "P"\n}\n', '成功：reqIdin{\n  "reqId": "0176988a02c400a98a7286ed768438dd",\n  "reqType": 1007,\n  "orderNo": "BPA0212011013869",\n  "fininstId": "11",\n  "status": "P"\n}\n')
+('reqId', '{\n  "reqId": "0176ad0d407f00b38a7286ed768438dd",\n  "reqType": 1007,\n  "orderNo": "BPA0212011013869",\n  "fininstId": "11",\n  "status": "P"\n}\n', '成功：reqIdin{\n  "reqId": "0176ad0d407f00b38a7286ed768438dd",\n  "reqType": 1007,\n  "orderNo": "BPA0212011013869",\n  "fininstId": "11",\n  "status": "P"\n}\n')
 结束单个测试
 
 
@@ -410,31 +414,35 @@ Wrong
     </td>
 </tr>
 
-<tr class='passClass warning'>
+<tr class='failClass warning'>
     <td>paramunittest.test_repayTrail_0</td>
     <td class="text-center">1</td>
-    <td class="text-center">1</td>
     <td class="text-center">0</td>
+    <td class="text-center">1</td>
     <td class="text-center">0</td>
     <td class="text-center"><a href="javascript:showClassDetail('c9',1)" class="detail" id='c9'>详细</a></td>
 </tr>
 
-<tr id='pt9_1' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_case_1: 还款试算</div></td>
+<tr id='ft9_1' class='none'>
+    <td class='failCase'><div class='testcase'>test_case_1: 还款试算</div></td>
     <td colspan='5' align='center'>
     <!--默认收起错误信息 -Findyou
-    <button id='btn_pt9_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt9_1'>通过</button>
-    <div id='div_pt9_1' class="collapse">  -->
+    <button id='btn_ft9_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft9_1'>失败</button>
+    <div id='div_ft9_1' class="collapse">  -->
 
     <!-- 默认展开错误信息 -Findyou -->
-    <button id='btn_pt9_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt9_1'>通过</button>
-    <div id='div_pt9_1' class="collapse in">
+    <button id='btn_ft9_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft9_1'>失败</button>
+    <div id='div_ft9_1' class="collapse in">
     <pre>
     
-pt9_1: 开始单个测试
+ft9_1: 开始单个测试
 start grpcurl.exe &amp;grpcurl -plaintext -d "{\"orderNo\":\"BPA0212011013869\",\"fininstId\":11,\"coFininstId\":11,\"loanId\":\"2012160065461101\",\"repayType\":\"01\",\"name\":\"闫凯\",\"paperType\":1,\"paperNo\":\"410622198905220037\",\"mainPayerAmount\":\"40000.00\",\"subPayerAmount\":\"1000.00\",\"files\":[]}" grpc-cango-fininst-gw.cango.local:8080 org.cango.fininst.gw.api.FininstGwAfterService.repayTrail
-('reqId', '{\n  "reqId": "0176988a041e00cc8a7285ba7670450f",\n  "reqType": 2002,\n  "orderNo": "BPA0212011013869",\n  "fininstId": "11",\n  "status": "F",\n  "msg": "记录不存在",\n  "data": {\n    \n  }\n}\n', '成功：reqIdin{\n  "reqId": "0176988a041e00cc8a7285ba7670450f",\n  "reqType": 2002,\n  "orderNo": "BPA0212011013869",\n  "fininstId": "11",\n  "status": "F",\n  "msg": "记录不存在",\n  "data": {\n    \n  }\n}\n')
+('reqId', '', '失败原因：reqId!in')
 结束单个测试
+Traceback (most recent call last):
+  File "C:\Users\cango\Desktop\GIT\cango-auto-test\testcase\test11_repayTrail.py", line 49, in test_case_1
+    raise AssertionError
+AssertionError
 
 
     </pre>
@@ -442,31 +450,35 @@ start grpcurl.exe &amp;grpcurl -plaintext -d "{\"orderNo\":\"BPA0212011013869\",
     </td>
 </tr>
 
-<tr class='passClass warning'>
+<tr class='failClass warning'>
     <td>paramunittest.test_repayApply_0</td>
     <td class="text-center">1</td>
-    <td class="text-center">1</td>
     <td class="text-center">0</td>
+    <td class="text-center">1</td>
     <td class="text-center">0</td>
     <td class="text-center"><a href="javascript:showClassDetail('c10',1)" class="detail" id='c10'>详细</a></td>
 </tr>
 
-<tr id='pt10_1' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_case_1: 还款申请</div></td>
+<tr id='ft10_1' class='none'>
+    <td class='failCase'><div class='testcase'>test_case_1: 还款申请</div></td>
     <td colspan='5' align='center'>
     <!--默认收起错误信息 -Findyou
-    <button id='btn_pt10_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt10_1'>通过</button>
-    <div id='div_pt10_1' class="collapse">  -->
+    <button id='btn_ft10_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft10_1'>失败</button>
+    <div id='div_ft10_1' class="collapse">  -->
 
     <!-- 默认展开错误信息 -Findyou -->
-    <button id='btn_pt10_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt10_1'>通过</button>
-    <div id='div_pt10_1' class="collapse in">
+    <button id='btn_ft10_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft10_1'>失败</button>
+    <div id='div_ft10_1' class="collapse in">
     <pre>
     
-pt10_1: 开始单个测试
+ft10_1: 开始单个测试
 start grpcurl.exe &amp;grpcurl -plaintext -d "{\"orderNo\":\"BPA0212011013869\",\"fininstId\":11,\"coFininstId\":11,\"loanId\":\"2012160065461101\",\"repayType\":\"01\",\"name\":\"闫凯\",\"paperType\":1,\"paperNo\":\"410622198905220037\",\"repayTerm\":10,\"mainPayTotalAmount\":\"39999\",\"mainPayNormAmount\":\"39999\",\"mainPayInteAmount\":\"0.00\",\"mainPayFee\":\"0.00\",\"subPayTotalAmount\":\"1000.00\",\"subPayNormAmount\":\"1000.00\",\"payInteAmount\":\"0.00\",\"subPayFee\":\"0.00\",\"files\":[{\"type\":\"\",\"url\":\"\"}]}" grpc-cango-fininst-gw.cango.local:8080 org.cango.fininst.gw.api.FininstGwAfterService.repayApply
-('reqId', '{\n  "reqId": "0176988a05f300cd8a7285ba7670450f",\n  "reqType": 2002,\n  "orderNo": "BPA0212011013869",\n  "fininstId": "11",\n  "status": "F",\n  "msg": "记录不存在",\n  "data": {\n    \n  }\n}\n', '成功：reqIdin{\n  "reqId": "0176988a05f300cd8a7285ba7670450f",\n  "reqType": 2002,\n  "orderNo": "BPA0212011013869",\n  "fininstId": "11",\n  "status": "F",\n  "msg": "记录不存在",\n  "data": {\n    \n  }\n}\n')
+('reqId', '', '失败原因：reqId!in')
 结束单个测试
+Traceback (most recent call last):
+  File "C:\Users\cango\Desktop\GIT\cango-auto-test\testcase\test12_repayApply.py", line 51, in test_case_1
+    raise AssertionError
+AssertionError
 
 
     </pre>
@@ -529,7 +541,7 @@ start grpcurl.exe &amp;grpcurl -plaintext -d "{\"orderNo\":\"BPA0212011013869\",
     
 pt12_1: 开始单个测试
 start grpcurl.exe &amp;grpcurl -plaintext -d "{\"orderNo\":\"BPA2062003004137\",\"fininstId\":11,\"coFininstId\":11,\"name\":\"姚快乐\",\"paperType\":1,\"paperNo\":\"341202199306264492\",\"subAcctNo\":\"623185009100041158\",\"bankAccount\":\"623185009100000154\",\"bankMobile\":\"14500000018\",\"newBankAccount\":\"6216730000100111808\",\"newBankMobile\":\"14500000018\",\"files\":[{\"type\":\"\",\"url\":\"http://www.bankofshanghai.com/BOSFX/2010/08\"}],\"reqId\":\"00250011BPA206200400576700080127\",\"modifyType\":\"00\"}" grpc-cango-fininst-gw.cango.local:8080 org.cango.fininst.gw.api.FininstGwAfterService.cardChangeApply
-('reqId', '{\n  "reqId": "0176988a091600ce8a7285ba7670450f",\n  "status": "F",\n  "ostatus": "S72_0003",\n  "msg": "Ecif客户查询失败111"\n}\n', '成功：reqIdin{\n  "reqId": "0176988a091600ce8a7285ba7670450f",\n  "status": "F",\n  "ostatus": "S72_0003",\n  "msg": "Ecif客户查询失败111"\n}\n')
+('reqId', '{\n  "reqId": "0176ad0d4c5b00b68a7286ed768438dd",\n  "status": "F",\n  "ostatus": "S72_0003",\n  "msg": "Ecif客户查询失败111"\n}\n', '成功：reqIdin{\n  "reqId": "0176ad0d4c5b00b68a7286ed768438dd",\n  "status": "F",\n  "ostatus": "S72_0003",\n  "msg": "Ecif客户查询失败111"\n}\n')
 结束单个测试
 
 
@@ -561,7 +573,7 @@ start grpcurl.exe &amp;grpcurl -plaintext -d "{\"orderNo\":\"BPA2062003004137\",
     
 pt13_1: 开始单个测试
 start grpcurl.exe &amp;grpcurl -plaintext -d "{\"orderNo\":\"BPA2062004005726\",\"fininstId\":11,\"coFininstId\":11,\"name\":\"闫凯\",\"paperType\":1,\"paperNo\":\"341202199306262913\",\"subAcctNo\":\"623185009100000733\",\"bankAccount\":\"623185009100000154\",\"bankMobile\":\"17787598603\",\"amount\":\"100\",\"memoInfo\":\"充值\",\"files\":[{\"type\":\"\",\"url\":\"\"}],\"reqId\":\"00250101BPA206200400572500079817\",\"currency\":\"156\",\"theirRef\":\"T24\",\"purpose\":\"T24\"}" grpc-cango-fininst-gw.cango.local:8080 org.cango.fininst.gw.api.FininstGwAfterService.chargeApply
-('reqId', '{\n  "reqId": "0176988a0aa900aa8a7286ed768438dd",\n  "status": "P",\n  "ostatus": "0001",\n  "msg": "处理中"\n}\n', '成功：reqIdin{\n  "reqId": "0176988a0aa900aa8a7286ed768438dd",\n  "status": "P",\n  "ostatus": "0001",\n  "msg": "处理中"\n}\n')
+('reqId', '{\n  "reqId": "0176ad0d504200dc8a7285ba7670450f",\n  "status": "P",\n  "ostatus": "0001",\n  "msg": "处理中"\n}\n', '成功：reqIdin{\n  "reqId": "0176ad0d504200dc8a7285ba7670450f",\n  "status": "P",\n  "ostatus": "0001",\n  "msg": "处理中"\n}\n')
 结束单个测试
 
 
@@ -593,7 +605,7 @@ start grpcurl.exe &amp;grpcurl -plaintext -d "{\"orderNo\":\"BPA2062004005726\",
     
 pt14_1: 开始单个测试
 start grpcurl.exe &amp;grpcurl -plaintext -d "{\"orderNo\":\"BPA2062004005725\",\"fininstId\":11,\"coFininstId\":11,\"subAcctNo\":\"623185009100041158\",\"bankAccount\":\"623185009100000154\",\"bankMobile\":\"18795274000\",\"amount\":\"0\",\"memoInfo\":\"提现\",\"files\":[{\"type\":\"\",\"url\":\"\"}],\"reqId\":\"017660c9523001498a7286c176467782\",\"currency\":\"156\",\"theirRef\":\"T24\",\"purpose\":\"T24\"}" grpc-cango-fininst-gw.cango.local:8080 org.cango.fininst.gw.api.FininstGwAfterService.withdrawApply
-('reqId', '{\n  "reqId": "0176988a0bf700cf8a7285ba7670450f",\n  "status": "F",\n  "ostatus": "S72_9991",\n  "msg": "提现交易失败"\n}\n', '成功：reqIdin{\n  "reqId": "0176988a0bf700cf8a7285ba7670450f",\n  "status": "F",\n  "ostatus": "S72_9991",\n  "msg": "提现交易失败"\n}\n')
+('reqId', '{\n  "reqId": "0176ad0d525b00dd8a7285ba7670450f",\n  "status": "F",\n  "ostatus": "S72_9991",\n  "msg": "提现交易失败"\n}\n', '成功：reqIdin{\n  "reqId": "0176ad0d525b00dd8a7285ba7670450f",\n  "status": "F",\n  "ostatus": "S72_9991",\n  "msg": "提现交易失败"\n}\n')
 结束单个测试
 
 
@@ -625,7 +637,7 @@ start grpcurl.exe &amp;grpcurl -plaintext -d "{\"orderNo\":\"BPA2062004005725\",
     
 pt15_1: 开始单个测试
 start grpcurl.exe &amp;grpcurl -plaintext -d "{\"orderNo\":\"BPA0212011013870\",\"fininstId\":11,\"coFininstId\":11,\"subAcctNo\":\"623185009100000733\"}" grpc-cango-fininst-gw.cango.local:8080 org.cango.fininst.gw.api.FininstGwAfterService.balanceQuery
-('reqId', '{\n  "reqId": "0176988a103f00d08a7285ba7670450f",\n  "status": "F",\n  "ostatus": "S72_0003",\n  "msg": "请求不合法"\n}\n', '成功：reqIdin{\n  "reqId": "0176988a103f00d08a7285ba7670450f",\n  "status": "F",\n  "ostatus": "S72_0003",\n  "msg": "请求不合法"\n}\n')
+('reqId', '{\n  "reqId": "0176ad0d53ac00b78a7286ed768438dd",\n  "status": "F",\n  "ostatus": "S72_0003",\n  "msg": "请求不合法"\n}\n', '成功：reqIdin{\n  "reqId": "0176ad0d53ac00b78a7286ed768438dd",\n  "status": "F",\n  "ostatus": "S72_0003",\n  "msg": "请求不合法"\n}\n')
 结束单个测试
 
 
@@ -634,31 +646,35 @@ start grpcurl.exe &amp;grpcurl -plaintext -d "{\"orderNo\":\"BPA0212011013870\",
     </td>
 </tr>
 
-<tr class='passClass warning'>
+<tr class='failClass warning'>
     <td>paramunittest.test_fullRefundApply_0</td>
     <td class="text-center">1</td>
-    <td class="text-center">1</td>
     <td class="text-center">0</td>
+    <td class="text-center">1</td>
     <td class="text-center">0</td>
     <td class="text-center"><a href="javascript:showClassDetail('c16',1)" class="detail" id='c16'>详细</a></td>
 </tr>
 
-<tr id='pt16_1' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_case_1: 全额退还申请</div></td>
+<tr id='ft16_1' class='none'>
+    <td class='failCase'><div class='testcase'>test_case_1: 全额退还申请</div></td>
     <td colspan='5' align='center'>
     <!--默认收起错误信息 -Findyou
-    <button id='btn_pt16_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt16_1'>通过</button>
-    <div id='div_pt16_1' class="collapse">  -->
+    <button id='btn_ft16_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft16_1'>失败</button>
+    <div id='div_ft16_1' class="collapse">  -->
 
     <!-- 默认展开错误信息 -Findyou -->
-    <button id='btn_pt16_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt16_1'>通过</button>
-    <div id='div_pt16_1' class="collapse in">
+    <button id='btn_ft16_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft16_1'>失败</button>
+    <div id='div_ft16_1' class="collapse in">
     <pre>
     
-pt16_1: 开始单个测试
+ft16_1: 开始单个测试
 start grpcurl.exe &amp;grpcurl -plaintext -d "{\"orderNo\":\"BPA0212011013870\",\"fininstId\":11,\"coFininstId\":11,\"accountType\":\"A\",\"bankAccount\":\"623185009100000154\",\"paperType\":1,\"paperNo\":\"341202199306264492\",\"files\":[{\"type\":\"\",\"url\":\"\"}],\"reqId\":\"01766985248600178a7286d9766946c2\",\"loanId\":\"2003170048978101\"}" grpc-cango-fininst-gw.cango.local:8080 org.cango.fininst.gw.api.FininstGwAfterService.fullRefundApply
-('reqId', '{\n  "reqId": "0176988a11c700d18a7285ba7670450f",\n  "status": "S",\n  "ostatus": "S",\n  "data": {\n    \n  }\n}\n', '成功：reqIdin{\n  "reqId": "0176988a11c700d18a7285ba7670450f",\n  "status": "S",\n  "ostatus": "S",\n  "data": {\n    \n  }\n}\n')
+('reqId', '', '失败原因：reqId!in')
 结束单个测试
+Traceback (most recent call last):
+  File "C:\Users\cango\Desktop\GIT\cango-auto-test\testcase\test18_fullRefundApply.py", line 53, in test_case_1
+    raise AssertionError
+AssertionError
 
 
     </pre>
@@ -666,31 +682,35 @@ start grpcurl.exe &amp;grpcurl -plaintext -d "{\"orderNo\":\"BPA0212011013870\",
     </td>
 </tr>
 
-<tr class='passClass warning'>
+<tr class='failClass warning'>
     <td>paramunittest.test_transferApply_0</td>
     <td class="text-center">1</td>
-    <td class="text-center">1</td>
     <td class="text-center">0</td>
+    <td class="text-center">1</td>
     <td class="text-center">0</td>
     <td class="text-center"><a href="javascript:showClassDetail('c17',1)" class="detail" id='c17'>详细</a></td>
 </tr>
 
-<tr id='pt17_1' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_case_1: E账户转账申请</div></td>
+<tr id='ft17_1' class='none'>
+    <td class='failCase'><div class='testcase'>test_case_1: E账户转账申请</div></td>
     <td colspan='5' align='center'>
     <!--默认收起错误信息 -Findyou
-    <button id='btn_pt17_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt17_1'>通过</button>
-    <div id='div_pt17_1' class="collapse">  -->
+    <button id='btn_ft17_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft17_1'>失败</button>
+    <div id='div_ft17_1' class="collapse">  -->
 
     <!-- 默认展开错误信息 -Findyou -->
-    <button id='btn_pt17_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt17_1'>通过</button>
-    <div id='div_pt17_1' class="collapse in">
+    <button id='btn_ft17_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft17_1'>失败</button>
+    <div id='div_ft17_1' class="collapse in">
     <pre>
     
-pt17_1: 开始单个测试
+ft17_1: 开始单个测试
 start grpcurl.exe &amp;grpcurl -plaintext -d "{\"orderNo\":\"BPA2062003004138\",\"fininstId\":11,\"coFininstId\":11,\"accountType\":\"A\",\"subAcctNo\":\"623185009100041166\",\"pubAccountNo\":\"12345\",\"bankCardNo\":\"623185009100000154\",\"amount\":\"40000\",\"name\":\"童聪\",\"paperType\":1,\"paperNo\":\"642221196108094063\",\"contno\":\"hq20180912211049\",\"loanId\":\"2003170048976101\",\"files\":[{\"type\":\"\",\"url\":\"\"}],\"reqId\":\"0176698b05ee00198a7286d9766946c2\",\"lmtSerNo\":\"2003170048976\"}" grpc-cango-fininst-gw.cango.local:8080 org.cango.fininst.gw.api.FininstGwAfterService.transferApply
-('reqId', '{\n  "reqId": "0176988a137700d28a7285ba7670450f",\n  "status": "S",\n  "ostatus": "S"\n}\n', '成功：reqIdin{\n  "reqId": "0176988a137700d28a7285ba7670450f",\n  "status": "S",\n  "ostatus": "S"\n}\n')
+('reqId', '', '失败原因：reqId!in')
 结束单个测试
+Traceback (most recent call last):
+  File "C:\Users\cango\Desktop\GIT\cango-auto-test\testcase\test19_transferApply.py", line 53, in test_case_1
+    raise AssertionError
+AssertionError
 
 
     </pre>
@@ -721,7 +741,7 @@ start grpcurl.exe &amp;grpcurl -plaintext -d "{\"orderNo\":\"BPA2062003004138\",
     
 pt18_1: 开始单个测试
 start grpcurl.exe &amp;grpcurl -plaintext -d "{\"orderNo\":\"BPA0212011013870\",\"fininstId\":11,\"coFininstId\":11,\"accountType\":\"A\",\"accountNo\":\"623185009100000154\",\"amount\":\"100\",\"files\":[{\"type\":\"\",\"url\":\"\"}],\"reqId\":\"01766a1c48ec00018a7286dd766a1c29\"}" grpc-cango-fininst-gw.cango.local:8080 org.cango.fininst.gw.api.FininstGwAfterService.accountDrawApply
-('reqId', '{\n  "reqId": "0176988a150700ab8a7286ed768438dd",\n  "status": "S",\n  "ostatus": "S"\n}\n', '成功：reqIdin{\n  "reqId": "0176988a150700ab8a7286ed768438dd",\n  "status": "S",\n  "ostatus": "S"\n}\n')
+('reqId', '{\n  "reqId": "0176ad0d5a5900b98a7286ed768438dd",\n  "status": "S",\n  "ostatus": "S"\n}\n', '成功：reqIdin{\n  "reqId": "0176ad0d5a5900b98a7286ed768438dd",\n  "status": "S",\n  "ostatus": "S"\n}\n')
 结束单个测试
 
 
@@ -733,10 +753,10 @@ start grpcurl.exe &amp;grpcurl -plaintext -d "{\"orderNo\":\"BPA0212011013870\",
 <tr id='total_row' class="text-center active">
     <td>总计</td>
     <td>18</td>
-    <td>18</td>
-    <td>0</td>
-    <td>0</td>
-    <td>通过率：100.00%</td>
+    <td>13</td>
+    <td>4</td>
+    <td>1</td>
+    <td>通过率：72.22%</td>
 </tr>
 </table>
 
