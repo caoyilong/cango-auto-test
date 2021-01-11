@@ -63,6 +63,7 @@ class test_preApply(unittest.TestCase):
 
         else:
             print('Wrong')
+        def 2
 
     # def test_case_2(self):
     #     '''case2 preApply'''

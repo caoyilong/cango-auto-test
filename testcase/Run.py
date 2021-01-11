@@ -3,6 +3,7 @@ import unittest
 import time
 from page_obj import HTMLTestReportCN
 from page_obj.HTMLTestReportCN import HTMLTestRunner
+from page_obj.HTMLTestRunner import HTMLTestRunner
 
 
 report_dir = '../report/'
@@ -18,30 +19,34 @@ if __name__ == '__main__':
 
     now = time.strftime('%Y-%m-%d %H_%M_%S')
     filename = report_dir + now + 'result.html'
+
+
+
     # fp = open(filename, 'wb')
-    # runner = HTMLTestRunner(stream=fp, title='测试报告', description='用例执行情况')
+    # runner= HTMLTestRunner(stream=fp, title='jiu测试报告', description='用例执行情况')
+    # # runner = HTMLTestRunner(stream=fp, title='测试报告', description='用例执行情况')
     # runner.run(discover)
     # fp.close()
 
-    # fp = open(filename,'wb')
-    # runner = HTMLTestReportCN.HTMLTestRunner(
-    #     stream=fp,
-    #     title='统一网关测试报告',
-    #     description='一期接口自动化',
-    #     tester='罗哲'
-    #     )
-    # runner.run(discover)
-    # fp.close()
-
-    fp = open(filename, 'wb')
-    runner = HTMLTestRunner(
+    fp = open(filename,'wb')
+    runner = HTMLTestReportCN.HTMLTestRunner(
         stream=fp,
         title='统一网关测试报告',
         description='一期接口自动化',
-        tester='测试人'
-    )
+        tester='罗哲'
+        )
     runner.run(discover)
     fp.close()
+
+    # fp = open(filename, 'wb')
+    # runner = HTMLTestRunner(
+    #     stream=fp,
+    #     title='统一网关测试报告',
+    #     description='一期接口自动化',
+    #     tester='测试'
+    # )
+    # runner.run(discover)
+    # fp.close()
 
 
 
